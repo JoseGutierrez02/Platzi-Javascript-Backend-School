@@ -1,0 +1,24 @@
+{
+  "name": "node-js",
+  "version": "0.1.0",
+  "description": "A chat like telegram, but way better",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "telegram",
+    "server"
+  ],
+  "author": "Jose Gutierrez",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5",
+    "multer": "^1.4.2",
+    "socket.io": "^4.0.1"
+  }
+}
