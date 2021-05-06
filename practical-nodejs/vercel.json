@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "env": {
+    "MYSQL_HOST": "@mysql_host",
+    "MYSQL_USER": "@mysql_user",
+    "MYSQL_PASSWORD": "@mysql_password",
+    "MYSQL_DB": "@mysql_db"
+  },
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "posts/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/auth(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/api/user(.*)",
+      "dest": "/api/index.js" 
+    },
+    {
+      "src": "/api/post(.*)",
+      "dest": "/posts/index.js"
+    }
+  ]
+}
